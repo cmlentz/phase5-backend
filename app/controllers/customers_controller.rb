@@ -7,9 +7,7 @@ class CustomersController < ApplicationController
   end
 
   def show
-    # customer = find_customer
-    id = params[:id]
-    customer = Customer.find(id)
+    customer = find_customer
     render json: customer, serializer: CustomerWithAnimalsSerializer
   end
 
