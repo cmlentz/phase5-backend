@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Customer.destroy_all
+
+customer1= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+
+puts 'Customer seeded...'
+
+Activity.destroy_all
+
+activity1= Activity.create(name: "Bar", age_req: 21, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+
+puts 'Activity seeded...'
+
+puts 'Seeding Complete...'
