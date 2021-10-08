@@ -1,3 +1,5 @@
 class RegisterSerializer < ActiveModel::Serializer
-  attributes :id, :customer_id, :activity_id
+  attributes :id
+  has_one :customer
+  has_one :activity
 end

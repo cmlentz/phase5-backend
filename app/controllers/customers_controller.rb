@@ -19,7 +19,7 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
-    params.permit(:name, :city, :state)
+    params.permit(:name, :age, :email, :city, :state)
   end
   
   def find_customer
