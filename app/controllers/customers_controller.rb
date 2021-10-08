@@ -8,7 +8,7 @@ class CustomersController < ApplicationController
 
   def show
     customer = find_customer
-    render json: customer, serializer: CustomerWithAnimalsSerializer
+    render json: customer, serializer: CustomerWithActivitiesSerializer
   end
 
   def create
