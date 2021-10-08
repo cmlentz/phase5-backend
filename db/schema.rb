@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2021_10_08_021234) do
   end
 
   create_table "registers", force: :cascade do |t|
-    t.integer "customer_id"
-    t.integer "activity_id"
+    t.bigint "customer_id", null: false
+    t.bigint "activity_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["activity_id"], name: "index_registers_on_activity_id"
