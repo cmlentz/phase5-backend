@@ -8,7 +8,7 @@
 
 Customer.destroy_all
 
-10.times do
+20.times do
   Customer.create(
     name: "#{Faker::Name.first_name}",
     age: (1..99).to_a.sample,
@@ -18,18 +18,8 @@ Customer.destroy_all
   )
 end
 
-# customer1= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer2= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer3= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer4= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer5= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer6= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer7= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer8= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer9= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-# customer10= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-
 puts 'Customer seeded...'
+
 
 Activity.destroy_all
 
@@ -37,12 +27,11 @@ activity1= Activity.create(name: "Bar", age_req: 21, city: "#{Faker::Address.cit
 activity2= Activity.create(name: "Restaraunt", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 activity3= Activity.create(name: "Movie", age_req: 13, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 activity4= Activity.create(name: "Concert", age_req: 16, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-activity5= Activity.create(name: "Sports Stadium", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+activity5= Activity.create(name: "Sports Event", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 activity6= Activity.create(name: "Museum", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 activity7= Activity.create(name: "Art Gallery", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 
-
-
 puts 'Activity seeded...'
+
 
 puts 'Seeding Complete...'
