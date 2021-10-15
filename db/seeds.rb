@@ -5,18 +5,29 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Customer.destroy_all
 
-customer1= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer2= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer3= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer4= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer5= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer6= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer7= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer8= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer9= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
-customer10= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+10.times do
+  Customer.create(
+    name: "#{Faker::Name.first_name}",
+    age: (1..99).to_a.sample,
+    email: "#{Faker::Internet.email}",
+    city: "#{Faker::Address.city}",
+    state: "#{Faker::Address.state}"
+  )
+end
+
+# customer1= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer2= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer3= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer4= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer5= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer6= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer7= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer8= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer9= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
+# customer10= Customer.create(name: "#{Faker::Name.first_name}", age: 21, email: "#{Faker::Internet.email}", city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 
 puts 'Customer seeded...'
 
