@@ -27,8 +27,7 @@ Customer.destroy_all
     age: (1..99).to_a.sample,
     email: "#{Faker::Internet.email}",
     city: "#{Faker::Address.city}",
-    state: "#{Faker::Address.state}",
-    activities: Activity.all.sample
+    state: "#{Faker::Address.state}"
   )
 end
 
