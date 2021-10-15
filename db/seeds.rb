@@ -6,21 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Customer.destroy_all
-
-20.times do
-  Customer.create(
-    name: "#{Faker::Name.first_name}",
-    age: (1..99).to_a.sample,
-    email: "#{Faker::Internet.email}",
-    city: "#{Faker::Address.city}",
-    state: "#{Faker::Address.state}"
-  )
-end
-
-puts 'Customer seeded...'
-
-
 Activity.destroy_all
 
 activity1= Activity.create(name: "Bar", age_req: 21, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
@@ -31,7 +16,23 @@ activity5= Activity.create(name: "Sports Event", age_req: 1, city: "#{Faker::Add
 activity6= Activity.create(name: "Museum", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 activity7= Activity.create(name: "Art Gallery", age_req: 1, city: "#{Faker::Address.city}",  state: "#{Faker::Address.state}")
 
-puts 'Activity seeded...'
+puts 'Activities seeded...'
+
+
+Customer.destroy_all
+
+20.times do
+  Customer.create(
+    name: "#{Faker::Name.first_name}",
+    age: (1..99).to_a.sample,
+    email: "#{Faker::Internet.email}",
+    city: "#{Faker::Address.city}",
+    state: "#{Faker::Address.state}",
+    activities: Activity.all.sample
+  )
+end
+
+puts 'Customers seeded...'
 
 
 puts 'Seeding Complete...'
