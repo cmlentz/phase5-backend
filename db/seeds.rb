@@ -21,7 +21,7 @@ puts 'Activities seeded...'
 
 Customer.destroy_all
 
-20.times do
+25.times do
   Customer.create(
     name: "#{Faker::Name.first_name}",
     age: (1..99).to_a.sample,
