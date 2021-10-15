@@ -28,7 +28,7 @@ Customer.destroy_all
     email: "#{Faker::Internet.email}",
     city: "#{Faker::Address.city}",
     state: "#{Faker::Address.state}"
-    # activities: Activity.all.sample
+    activities: Activity.all.sample
   )
 end
 
